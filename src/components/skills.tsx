@@ -15,7 +15,7 @@ export default function Skills() {
       <h2 className="mt-8 text-4xl font-semibold tracking-tight md:text-5xl">
         Tech
       </h2>
-      <div className="mt-6 flex w-2/3 flex-wrap justify-end gap-2 border-4 border-black bg-slate-50 p-4 drop-shadow-[10px_10px_0px_rgba(0,0,0,1)] transition hover:drop-shadow-[16px_25px_0px_rgba(0,0,0,1)] motion-reduce:transition-none dark:border-white dark:bg-slate-950 dark:drop-shadow-[10px_10px_0px_rgba(255,255,255,1)] dark:hover:drop-shadow-[16px_25px_0px_rgba(255,255,255,1)]">
+      <div className="mt-6 flex w-2/3 flex-wrap justify-start gap-2 border-4 border-black bg-slate-50 p-4 drop-shadow-[10px_10px_0px_rgba(0,0,0,1)] transition hover:drop-shadow-[16px_25px_0px_rgba(0,0,0,1)] motion-reduce:transition-none dark:border-white dark:bg-slate-950 dark:drop-shadow-[10px_10px_0px_rgba(255,255,255,1)] dark:hover:drop-shadow-[16px_25px_0px_rgba(255,255,255,1)]">
         {skillImgLinks.map((link) => (
           <img className="w-20 shrink-0 grow-0" src={link} />
         ))}

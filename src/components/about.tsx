@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div
       id="1"
-      className="min-h-screen snap-start px-4 py-32 odd:bg-blue-200 even:bg-white dark:odd:bg-blue-900 dark:even:bg-slate-900 xl:px-72 xl:py-32"
+      className="min-h-screen snap-start border-b-4 border-slate-950 px-4 py-32 odd:bg-blue-200 even:bg-white dark:border-slate-50 dark:odd:bg-blue-900 dark:even:bg-slate-900 xl:px-72 xl:py-32"
     >
       <h1 className="mb-5 text-balance text-5xl font-bold uppercase tracking-tight sm:text-6xl md:text-7xl xl:text-8xl">
         About Me
