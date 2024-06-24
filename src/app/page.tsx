@@ -8,7 +8,7 @@ const items = ["Home", "About", "Web", "Sound", "Writing"];
 
 export default function Page() {
   return (
-    <main className="">
+    <main className="overflow-visible">
       <Home></Home>
       <About></About>
       <Web></Web>

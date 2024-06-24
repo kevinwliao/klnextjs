@@ -14,7 +14,7 @@ export default function Home() {
     >
       <motion.div
         style={{ scaleX: scrollYProgress }}
-        className="fixed left-0 top-0 z-50 h-2 w-screen origin-left bg-yellow-500"
+        className="fixed left-0 top-0 z-50 h-2 w-screen origin-left bg-yellow-600 dark:bg-yellow-300"
       ></motion.div>
       <div className="flex flex-col items-start justify-between gap-12 sm:flex-row">
         <div className="uppercase">
@@ -26,7 +26,7 @@ export default function Home() {
               Kevin Liao
             </div>
           </h1>
-          <h2 className="relative z-50 text-4xl font-semibold tracking-tight text-yellow-600 dark:text-yellow-200">
+          <h2 className="relative z-50 text-4xl font-semibold tracking-tight text-yellow-600 dark:text-yellow-300">
             Front-end Developer & Musician
           </h2>
         </div>

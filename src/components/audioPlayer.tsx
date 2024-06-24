@@ -22,7 +22,15 @@ const Note = () => {
   );
 };
 
-const Blurb = () => {
+const NightmareLibrary = {
+  title: "Nightmare Library",
+  year: "2023",
+  location: "CCRMA",
+  description:
+    "Algorithmic composition created in the ChucK programming language.",
+};
+
+const Blurb1 = () => {
   return (
     <div className="font-mono text-sm font-medium tracking-widest">
       <div className="text-lg font-black">Nightmare Library (2023)</div> is an
@@ -85,7 +93,7 @@ export default function AudioPlayer() {
           ></FastForward>
         </button>
       </div>
-      <Blurb></Blurb>
+      <Blurb1></Blurb1>
     </div>
   );
 }
