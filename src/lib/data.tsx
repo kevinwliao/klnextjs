@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { JSDOM } from "jsdom";
-import { playfair_display } from "@/app/fonts";
 
 type metaTagsType = {
   [name: string]: string;
@@ -60,13 +59,17 @@ async function LinkPreview({ url }: { url: string }) {
         <div className="basis-7/12 md:basis-9/12  flex-none flex flex-col gap-4 justify-start min-w-0">
           <h3
             className={
-              "text-xl md:text-2xl text-serif font-bold tracking-tighter "
+              "text-xl md:text-3xl text-serif font-bold tracking-tight "
             }
           >
             {data.title}
           </h3>
-          <p className="text-stone-800">{data.description}</p>
-          <span className="text-stone-500 text-xs">{url}</span>
+          {/* <p className="text-slate-800 dark:text-white text-xl">
+            {data.description}
+          </p> */}
+          <span className="text-slate-600 dark:text-slate-400 text-lg">
+            {url}
+          </span>
         </div>
         <div className="basis-5/12 min-h-32">
           <div className="relative h-full w-full">

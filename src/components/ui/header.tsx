@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { playfair_display } from "@/app/fonts";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";

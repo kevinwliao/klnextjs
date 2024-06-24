@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { inter } from "./fonts";
-import { playfair_display } from "./fonts";
+import { roboto } from "./fonts";
 import "./globals.css";
 import Header from "@/components/ui/header";
 import Image from "next/image";
 import Sidenav from "@/components/ui/sidenav";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Kevin Liao",
@@ -17,10 +17,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className}`}>
-        <Sidenav></Sidenav>
-        {children}
+    <html suppressHydrationWarning lang="en" className="scroll-smooth">
+      <body className={`${roboto.className} text-slate-950 dark:text-slate-50`}>
+        {/* @ts-ignore */}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Sidenav></Sidenav>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
