@@ -23,20 +23,12 @@ const Note = () => {
   );
 };
 
-const NightmareLibrary = {
-  title: "Nightmare Library",
-  year: "2023",
-  location: "CCRMA",
-  description:
-    "Algorithmic composition created in the ChucK programming language.",
-};
-
-const Blurb1 = () => {
+const Blurb = () => {
   return (
     <div className="flex flex-col">
-      <div className="text-lg font-bold uppercase">Nightmare Library</div>{" "}
+      <div className="text-lg font-bold lowercase">Nightmare Library</div>{" "}
       <div className="text-sm">
-        algorithmic composition developed in{" "}
+        algorithmic composition created in{" "}
         <A className="normal-case" href="https://chuck.stanford.edu/">
           ChucK
         </A>
@@ -49,16 +41,27 @@ const Blurb1 = () => {
   );
 };
 
-const Blurb2 = () => {
-  return (
-    <div className="flex flex-col">
-      <div className="text-lg font-bold uppercase">Running, Stomping...</div>{" "}
-      <div className="text-sm">
-        Piece for saxophone quartet composed in 2022, performed at CCRMA.
-      </div>
-    </div>
-  );
-};
+const songs = [
+  {
+    title: "Nightmare Library",
+    description: (
+      <>
+        Algorithmic composition created in{" "}
+        <A className="normal-case" href="https://chuck.stanford.edu/">
+          ChucK
+        </A>
+        .{" "}
+        <A href="https://soundcloud.com/kevin-liao-775540098/nightmare-library-1">
+          info and attributions.
+        </A>
+      </>
+    ),
+  },
+  {
+    title: "Running, Stomping...",
+    description: <>Piece for saxophone quartet, performed at CCRMA in 2022</>,
+  },
+];
 
 export default function AudioPlayer() {
   const [playing, setPlaying] = useState(false);
@@ -74,16 +77,15 @@ export default function AudioPlayer() {
   };
 
   return (
-    <div className="mr-4 flex items-center gap-4 border-4 border-black bg-slate-50 p-6 drop-shadow-[10px_10px_0px_rgba(0,0,0,1)] transition hover:drop-shadow-[16px_25px_0px_rgba(0,0,0,1)] motion-reduce:transition-none dark:border-white dark:bg-slate-950 dark:drop-shadow-[10px_10px_0px_rgba(255,255,255,1)] dark:hover:drop-shadow-[16px_25px_0px_rgba(255,255,255,1)] sm:w-72 sm:rotate-3 sm:flex-col sm:hover:rotate-6 md:mr-0">
-      <div className="thumbnail aspect-square w-full border-4 border-black bg-[#8ace00] dark:border-white">
+    <div className="mr-4 flex items-center gap-4 rounded-tl-[3rem] border-4 border-black bg-slate-50 p-6 drop-shadow-[10px_10px_0px_rgba(0,0,0,1)] transition hover:drop-shadow-[16px_25px_0px_rgba(0,0,0,1)] motion-reduce:transition-none dark:border-white dark:bg-slate-950 dark:drop-shadow-[10px_10px_0px_rgba(255,255,255,1)] dark:hover:drop-shadow-[16px_25px_0px_rgba(255,255,255,1)] sm:w-72 sm:rotate-3 sm:flex-col sm:hover:rotate-6 md:mr-0">
+      <div className="thumbnail aspect-square w-full rounded-tl-[1.6rem] border-4 border-black bg-[#8ace00] dark:border-white">
         <Note></Note>
       </div>
-      <audio ref={audioRef}>
-        <source src="https://cdn.freesound.org/previews/698/698229_1531809-lq.ogg"></source>
-        <source src="https://cdn.freesound.org/previews/698/698229_1531809-lq.mp3"></source>
+      <audio ref={audioRef} onEnded={() => setPlaying(false)}>
+        <source src="/audio/nightmarelibrary.wav"></source>
       </audio>
 
-      <div className="flex flex-col justify-start">
+      <div className="flex flex-col justify-start gap-2">
         <div className="interface flex w-full items-center justify-around">
           <button>
             <SkipBack
@@ -123,7 +125,7 @@ export default function AudioPlayer() {
             ></SkipForward>
           </button>
         </div>
-        <Blurb1></Blurb1>
+        <Blurb></Blurb>
       </div>
     </div>
   );

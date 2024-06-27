@@ -4,7 +4,13 @@ import { cn } from "@/lib/utils";
 // for inline links
 type AProps = ComponentPropsWithoutRef<"a">;
 
-export default function A({ href, children, className, ...props }: AProps) {
+export default function A({
+  href,
+  children,
+  className,
+  target = "_blank",
+  ...props
+}: AProps) {
   return (
     <>
       <a
@@ -13,7 +19,7 @@ export default function A({ href, children, className, ...props }: AProps) {
           className,
         )}
         href={href}
-        target="_blank"
+        target={target}
         rel="noreferrer nofollow"
       >
         {children}

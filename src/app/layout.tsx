@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { roboto } from "./fonts";
+import { lexend_exa } from "./fonts";
 import "./globals.css";
 import Header from "@/components/ui/header";
 import Image from "next/image";
@@ -18,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en" className="scroll-smooth">
-      <body className={`${roboto.className} text-slate-950 dark:text-slate-50`}>
+      <body
+        className={`${lexend_exa.className} text-slate-950 dark:text-slate-50`}
+      >
         {/* @ts-ignore */}
         <ThemeProvider
           attribute="class"

@@ -9,8 +9,8 @@ export default function Home() {
 
   return (
     <div
-      id="0"
-      className="flex min-h-screen flex-col border-b-4 border-slate-950 px-4 py-24 odd:bg-blue-200 even:bg-white dark:border-slate-50 dark:odd:bg-blue-950 dark:even:bg-slate-900 md:px-24 lg:px-48 xl:px-72 xl:py-24"
+      id="home"
+      className="z-10 flex min-h-screen flex-col border-b-4 border-slate-950 px-4 py-24 odd:bg-blue-200 even:bg-white dark:border-slate-50 dark:odd:bg-blue-950 dark:even:bg-slate-900 md:px-24 lg:px-48 xl:px-72 xl:py-24"
     >
       <motion.div
         style={{ scaleX: scrollYProgress }}
@@ -27,14 +27,14 @@ export default function Home() {
             </div>
           </h1>
           <h2 className="relative z-50 text-2xl font-semibold tracking-tight text-yellow-600 dark:text-yellow-300 sm:text-4xl">
-            Front-end Developer & Musician
+            Front-end Dev & Musician
           </h2>
         </div>
         <AudioPlayer></AudioPlayer>
       </div>
-      <div className="flex flex-grow items-center justify-center">
+      <div className="z-50 flex flex-grow items-center justify-center">
         <a
-          href="#1"
+          href="#about"
           className="flex flex-col items-center justify-center gap-4 tracking-tight transition-all hover:tracking-wide hover:text-sky-600"
         >
           <div className="text-2xl font-medium sm:block">Learn More</div>

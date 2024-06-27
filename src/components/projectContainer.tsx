@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Image from "next/image";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
@@ -12,14 +13,16 @@ import {
 
 const BoomChuck = {
   title: "BoomChuck",
-  skills: ["Web Audio", "NextJS", "TypeScript", "React"],
-  description: "Bluegrass backing track generator",
+  skills: ["Web Audio", "Next.js", "TypeScript", "React"],
+  description:
+    "Site for interactive generation for Bluegrass-style accompaniment",
 };
 
 const ThrowADart = {
   title: "Throw a Dart",
-  skills: ["NextJS", "TypeScript", "React", "D3", "GeoJSON", "TopoJSON"],
-  description: "Virtually throw a dart onto different map projections",
+  skills: ["Next.js", "TypeScript", "React", "D3", "GeoJSON", "TopoJSON"],
+  description:
+    "Virtually throw a dart onto Mercator and Transverse Mercator map projections",
 };
 
 const Dyads = {
@@ -31,17 +34,24 @@ const Dyads = {
 
 const HeatSong = {
   title: "Heat Songs",
-  skills: ["Sonification", "D3", "NextJS", "TypeScript"],
+  skills: ["Sonification", "D3", "Next.js", "TypeScript"],
   description: "Interactive sonification of longitudinal climate data",
 };
 
-const Cards = [BoomChuck, ThrowADart, Dyads, HeatSong];
+const NightmareLibrary = {
+  title: "Nightmare Library",
+  skills: ["ChucK", "Audio Programming"],
+  description: "2023 algorithmic composition",
+};
+
+const Cards = [BoomChuck, ThrowADart, Dyads, HeatSong, NightmareLibrary];
 
 export default function ProjectContainer() {
   return (
     <Carousel
       opts={{
         align: "start",
+        loop: true,
       }}
       className="w-full"
     >
@@ -53,7 +63,14 @@ export default function ProjectContainer() {
           >
             <div className="h-full p-1">
               <div className="box-border flex aspect-square flex-col items-start gap-2 rounded-none border-4 border-black bg-white p-4 drop-shadow-[10px_10px_0px_rgba(0,0,0,1)] transition hover:drop-shadow-[16px_25px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-slate-950 dark:drop-shadow-[10px_10px_0px_rgba(255,255,255,1)] dark:hover:drop-shadow-[16px_25px_0px_rgba(255,255,255,1)]">
-                <div className="h-2/3 w-full bg-red-500"></div>
+                <div className="relative h-2/3 w-full border-4 border-slate-950 bg-red-500">
+                  <Image
+                    src="/throwadart.png"
+                    alt="Throw a Dart"
+                    fill={true}
+                    className="object-cover"
+                  ></Image>
+                </div>
                 <div>
                   <div className="font-mono text-lg font-semibold">
                     {card.title}:
@@ -72,8 +89,8 @@ export default function ProjectContainer() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      {/* <CarouselPrevious />
-      <CarouselNext /> */}
+      <CarouselPrevious />
+      <CarouselNext />
     </Carousel>
   );
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Github, Linkedin } from "lucide-react";
+import A from "@/components/a";
 
 const arr = [
   {
@@ -16,9 +17,9 @@ const arr = [
 
 export default function Socials() {
   return (
-    <ul className="flex gap-4 mt-4">
+    <ul className="mt-4 flex gap-4">
       {arr.map((social) => (
-        <Link href="url">{social.icon}</Link>
+        <A href={social.url}>{social.icon}</A>
       ))}
     </ul>
   );

@@ -23,11 +23,11 @@ export default function ModeToggle() {
     <div className="flex justify-between">
       {theme === "dark" ? (
         <button onClick={() => setTheme("light")}>
-          <Sun></Sun>
+          <Sun strokeWidth={3}></Sun>
         </button>
       ) : (
         <button onClick={() => setTheme("dark")}>
-          <Moon></Moon>
+          <Moon strokeWidth={3}></Moon>
         </button>
       )}
     </div>

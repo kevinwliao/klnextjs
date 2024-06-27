@@ -5,7 +5,7 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
-const items = ["Home", "About", "Web", "Sound", "Writing"];
+const items = ["Home", "About", "Skills", "Projects", "Writing"];
 
 export default function Sidenav() {
   const [open, setOpen] = useState(false);
@@ -13,16 +13,16 @@ export default function Sidenav() {
 
   return (
     <>
-      <nav className="fixed left-6 h-screen hidden xl:block uppercase w-48">
-        <ul className="h-full flex flex-col justify-center p-4 gap-4 w-full ">
+      <nav className="fixed left-6 z-50 hidden h-screen w-48 uppercase xl:block">
+        <ul className="flex h-full w-full flex-col justify-center gap-4 p-4">
           {items.map((item, i) => (
             <li
-              className={`font-medium text-2xl tracking-tight w-full hover:tracking-wide transition-all hover:text-cyan-500 ${
+              className={`w-full text-2xl font-medium tracking-tight transition-all hover:tracking-wide hover:text-cyan-500 ${
                 pathname === `/#3` ? "bg-white text-blue-900" : ""
               }`}
               key={i}
             >
-              <Link href={`#${i}`}>{item}</Link>
+              <Link href={`#${item.toLowerCase()}`}>{item}</Link>
             </li>
           ))}
           <li>
@@ -36,7 +36,7 @@ export default function Sidenav() {
 
 function mobileNav() {
   return (
-    <nav className="mobile xl:hidden fixed w-screen bg-white">
+    <nav className="mobile fixed w-screen bg-white xl:hidden">
       <button>
         <Menu></Menu>
       </button>
