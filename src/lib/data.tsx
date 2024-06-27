@@ -55,31 +55,29 @@ async function LinkPreview({ url }: { url: string }) {
 
   return (
     <Link href={url} target="_blank" className="">
-      <div className="flex flex-row justify-between gap-8 border-b-4 border-slate-950 py-10 dark:border-slate-50">
-        <div className="flex min-w-0 flex-none basis-7/12 flex-col justify-start gap-4 md:basis-9/12">
+      <div className="flex justify-between gap-4 border-b-4 border-slate-950 py-4 dark:border-slate-50">
+        <div className="flex w-2/3 flex-col justify-start gap-4">
           <h3
             className={
-              "text-serif text-xl font-bold uppercase tracking-tight md:text-3xl"
+              "text-serif text-xl font-bold uppercase tracking-tight md:text-2xl"
             }
           >
             {data.title}
           </h3>
-          {/* <p className="text-slate-800 dark:text-white text-xl">
+          {/* <p className="text-xl text-slate-800 dark:text-white">
             {data.description}
           </p> */}
-          <span className="text-lg text-slate-600 dark:text-slate-400">
+          <span className="break-words text-lg text-slate-600 dark:text-slate-400">
             {url}
           </span>
         </div>
-        <div className="min-h-32 basis-5/12">
-          <div className="relative h-full w-full">
-            <Image
-              src={data.image}
-              alt="Link Preview"
-              fill
-              className="object-contain"
-            />
-          </div>
+        <div className="relative inline-block h-32 w-60">
+          <Image
+            src={data.image}
+            alt="Link Preview"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
     </Link>
