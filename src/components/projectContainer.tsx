@@ -113,7 +113,7 @@ export default function ProjectContainer() {
                   <div className="text-2xl font-bold uppercase">
                     {card.title}:
                   </div>
-                  <div className="relative h-2/3 w-full border-4 border-slate-950 bg-brat-500">
+                  <div className="relative h-2/3 w-full border-4 border-slate-950 bg-brat-500 dark:border-slate-50">
                     <Image
                       src={card.img}
                       alt="Throw a Dart"
