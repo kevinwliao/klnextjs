@@ -74,7 +74,7 @@ async function LinkPreview({ url }: { url: string }) {
           {url}
         </span>
       </div>
-      <div className="relative inline-block h-32 w-60 border-4 border-slate-950 dark:border-slate-50">
+      <div className="relative inline-block h-32 w-60 border-4 border-slate-950 bg-brat-500 dark:border-slate-50">
         <Image
           src={data.image}
           alt="Link Preview"
