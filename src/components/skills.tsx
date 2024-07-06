@@ -13,10 +13,10 @@ export default function Skills() {
         Multimedia
       </h2>
       <ul className="list-inside list-disc">
-        <li>Interviewing, Writing, Journalism</li>
-        <li>Audio and Music Production, Sound Design, Music Composition</li>
-        <li>Data Visualization, Data Sonification</li>
-        <li>Creative Coding</li>
+        <li>Interviewing, writing, journalism</li>
+        <li>Audio and music production, sound design, music composition</li>
+        <li>Fine art</li>
+        <li>Mighty fine pickin'</li>
       </ul>
     </div>
   );

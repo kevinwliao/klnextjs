@@ -25,10 +25,9 @@ export default function Tech() {
         ))}
       </div>
       <ul className="list-inside list-disc">
-        <li>Interviewing, Writing, Journalism</li>
-        <li>Audio and Music Production, Sound Design, Music Composition</li>
-        <li>Data Visualization, Data Sonification</li>
-        <li>Creative Coding</li>
+        <li>Designing and building modern, responsive web-apps</li>
+        <li>Data visualization, data sonification</li>
+        <li>Creative coding, visual and audio</li>
       </ul>
     </div>
   );

@@ -126,7 +126,7 @@ export default function ProjectContainer() {
                     {card.skills.map((skill, i) => (
                       <span
                         key={i}
-                        className="rounded-none bg-brat-200 px-3 py-1 text-xs font-light dark:bg-brat-700"
+                        className="rounded-none bg-brat-400 px-3 py-1 text-xs font-light dark:bg-brat-700"
                       >
                         {skill}
                       </span>
