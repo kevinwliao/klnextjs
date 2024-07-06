@@ -16,7 +16,7 @@ export default function Skills() {
         <li>Interviewing, writing, journalism</li>
         <li>Audio and music production, sound design, music composition</li>
         <li>Fine art</li>
-        <li>Mighty fine pickin'</li>
+        <li>Mighty fine pickin&apos;</li>
       </ul>
     </div>
   );
