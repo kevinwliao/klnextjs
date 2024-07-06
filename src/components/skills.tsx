@@ -9,6 +9,13 @@ export default function Skills() {
         Skills
       </h1>
       <Tech></Tech>
+      <h2 className="mb-4 text-4xl font-semibold uppercase tracking-tight md:text-5xl">
+        Multimedia
+      </h2>
+      <div>Interviewing, Copywriting, Journalism</div>
+      <div>Audio and Music Production, Sound Design, Music Composition</div>
+      <div>Data Visualization, Data Sonification</div>
+      <div>Fine Art</div>
     </div>
   );
 }

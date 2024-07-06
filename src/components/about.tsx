@@ -7,12 +7,12 @@ const arr = [
   {
     name: "Github",
     icon: <Github size="32"></Github>,
-    url: "https://github.com/",
+    url: "https://github.com/kevinwliao",
   },
   {
     name: "LinkedIn",
     icon: <Linkedin size="32"></Linkedin>,
-    url: "https://linkedin.com/",
+    url: "https://www.linkedin.com/in/kevin-l-87084b16b/",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function About() {
         {
           <ul className="mt-4 flex gap-4">
             {arr.map((social) => (
-              <div className="">
+              <div className="dark:hover:slate-950 p-2 hover:bg-slate-950 hover:text-slate-50 dark:hover:bg-slate-50">
                 <A
                   className="text-inherit hover:text-inherit"
                   href={social.url}

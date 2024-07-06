@@ -54,31 +54,33 @@ async function LinkPreview({ url }: { url: string }) {
   }
 
   return (
-    <Link href={url} target="_blank" className="">
-      <div className="flex justify-between gap-4 border-b-4 border-slate-950 py-4 dark:border-slate-50">
-        <div className="flex w-2/3 flex-col justify-start gap-4">
-          <h3
-            className={
-              "text-serif text-xl font-bold uppercase tracking-tight md:text-2xl"
-            }
-          >
-            {data.title}
-          </h3>
-          {/* <p className="text-xl text-slate-800 dark:text-white">
+    <Link
+      href={url}
+      target="_blank"
+      className="flex justify-between gap-4 overflow-visible border-b-4 border-slate-950 py-4 last:border-none dark:border-slate-50"
+    >
+      <div className="flex w-2/3 flex-col justify-start gap-4">
+        <h3
+          className={
+            "text-serif text-xl font-bold uppercase tracking-tight md:text-2xl"
+          }
+        >
+          {data.title}
+        </h3>
+        {/* <p className="text-xl text-slate-800 dark:text-white">
             {data.description}
           </p> */}
-          <span className="break-words text-lg text-slate-600 dark:text-slate-400">
-            {url}
-          </span>
-        </div>
-        <div className="relative inline-block h-32 w-60">
-          <Image
-            src={data.image}
-            alt="Link Preview"
-            fill
-            className="object-cover"
-          />
-        </div>
+        <span className="break-words text-base text-slate-600 dark:text-slate-400">
+          {url}
+        </span>
+      </div>
+      <div className="relative inline-block h-32 w-60 border-4 border-slate-950 dark:border-slate-50">
+        <Image
+          src={data.image}
+          alt="Link Preview"
+          fill
+          className="object-cover"
+        />
       </div>
     </Link>
   );
