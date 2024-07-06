@@ -12,10 +12,12 @@ export default function Skills() {
       <h2 className="mb-4 text-4xl font-semibold uppercase tracking-tight md:text-5xl">
         Multimedia
       </h2>
-      <div>Interviewing, Copywriting, Journalism</div>
-      <div>Audio and Music Production, Sound Design, Music Composition</div>
-      <div>Data Visualization, Data Sonification</div>
-      <div>Fine Art</div>
+      <ul className="list-inside list-disc">
+        <li>Interviewing, Writing, Journalism</li>
+        <li>Audio and Music Production, Sound Design, Music Composition</li>
+        <li>Data Visualization, Data Sonification</li>
+        <li>Creative Coding</li>
+      </ul>
     </div>
   );
 }

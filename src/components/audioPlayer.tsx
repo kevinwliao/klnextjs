@@ -8,6 +8,7 @@ import {
   Play,
   PlaySquare,
   Rewind,
+  FastForward,
 } from "lucide-react";
 import { useRef, useState } from "react";
 
@@ -88,13 +89,13 @@ export default function AudioPlayer() {
       <div className="flex flex-col justify-start gap-2">
         <div className="interface flex w-full items-center justify-around">
           <button>
-            <SkipBack
+            <Rewind
               size="32"
               strokeWidth="4"
               className="fill-current/0 transition hover:fill-current"
               absoluteStrokeWidth={true}
               strokeLinejoin="miter"
-            ></SkipBack>
+            ></Rewind>
           </button>
           <button onClick={handlePlayPause}>
             {!playing ? (
@@ -116,13 +117,13 @@ export default function AudioPlayer() {
             )}
           </button>
           <button>
-            <SkipForward
+            <FastForward
               absoluteStrokeWidth={true}
               size="32"
               strokeWidth="4"
               className="fill-current/0 transition hover:fill-current"
               strokeLinejoin="miter"
-            ></SkipForward>
+            ></FastForward>
           </button>
         </div>
         <Blurb></Blurb>

@@ -14,16 +14,16 @@ import A from "@/components/a";
 
 const BoomChuck = {
   title: "BoomChuck",
-  skills: ["Web Audio", "Next.js", "TypeScript", "React"],
+  skills: ["Web Audio", "Next.js", "TypeScript", "React", "Tone.js"],
   url: "https://boomchuck.vercel.app/",
   img: "/boomchuck.png",
   description:
-    "Site for interactive generation of Bluegrass-style accompaniment",
+    "Site for interactive generation of Bluegrass-style accompaniment.",
 };
 
 const ThrowADart = {
   title: "Throw a Dart",
-  skills: ["Next.js", "TypeScript", "React", "D3", "GeoJSON", "TopoJSON"],
+  skills: ["Next.js", "TypeScript", "React", "D3.js", "GeoJSON", "TopoJSON"],
   url: "https://throwadart.vercel.app/",
   img: "/throwadart.png",
 
@@ -33,11 +33,18 @@ const ThrowADart = {
 
 const Dyads = {
   title: "Dyads",
-  skills: ["Visualization", "Sonification", "React", "D3"],
+  skills: [
+    "Visualization",
+    "Sonification",
+    "React",
+    "D3.js",
+    "Web Audio",
+    "Tone.js",
+  ],
   url: "https://boomchuck.vercel.app/",
   img: "/dyads.png",
   description:
-    "Interactive sonification of longitudinal data. Data Musik @ Stanford",
+    "Interactive sonification of longitudinal data. Data Musik @ Stanford. Link currently N/A.",
 };
 
 const HeatSong = {
@@ -98,7 +105,7 @@ export default function ProjectContainer() {
                   <div className="text-2xl font-bold uppercase">
                     {card.title}:
                   </div>
-                  <div className="bg-brat-500 relative h-2/3 w-full border-4 border-slate-950">
+                  <div className="relative h-2/3 w-full border-4 border-slate-950 bg-brat-500">
                     <Image
                       src={card.img}
                       alt="Throw a Dart"

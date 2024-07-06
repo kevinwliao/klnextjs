@@ -30,7 +30,7 @@ export default function Home() {
             Developer and Artist
           </h2>
         </div>
-        {/* <AudioPlayer></AudioPlayer> */}
+        <AudioPlayer></AudioPlayer>
       </div>
       <div className="z-50 flex flex-grow items-center justify-center">
         <a
