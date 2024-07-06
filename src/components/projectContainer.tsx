@@ -115,8 +115,11 @@ export default function ProjectContainer() {
                   </div>
                   <div className="text-sm">{card.description}</div>
                   <div className="flex max-w-full flex-wrap gap-2 border-yellow-500">
-                    {card.skills.map((skill) => (
-                      <span className="rounded-full bg-slate-200 px-3 text-xs font-light dark:bg-slate-700">
+                    {card.skills.map((skill, i) => (
+                      <span
+                        key={i}
+                        className="rounded-full bg-slate-200 px-3 text-xs font-light dark:bg-slate-700"
+                      >
                         {skill}
                       </span>
                     ))}

@@ -50,7 +50,7 @@ async function LinkPreview({ url }: { url: string }) {
   const data = await extractMetaTags(url);
 
   if (!data) {
-    return <p>"Failed to fetch link preview."</p>;
+    return <p>Failed to fetch link preview.</p>;
   }
 
   return (

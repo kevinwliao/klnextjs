@@ -1,5 +1,4 @@
 import Tech from "@/components/tech";
-import Socials from "@/components/ui/socials";
 import { Github, Linkedin } from "lucide-react";
 import A from "@/components/a";
 
@@ -27,15 +26,15 @@ export default function About() {
           About Me
         </h1>
         <p className="mb-4 text-lg sm:text-xl md:w-3/4">
-          Hey, I'm Kevin! I'm a 2024 Stanford University graduate, where I
-          earned a degree in{" "}
+          Hey, I&apos;m Kevin! I&apos;m a 2024 Stanford University graduate,
+          where I earned a degree in{" "}
           <A href="https://symsys.stanford.edu/">Symbolic Systems</A> with a
-          concentration in Computer Music. As a developer, I'm excited about
-          cutting-edge front-end technology and continuing to integrate my
+          concentration in Computer Music. As a developer, I&apos;m excited
+          about cutting-edge front-end technology and continuing to integrate my
           interdisciplinary technical and creative background into my workflow.
         </p>
         <p className="mb-4 text-lg sm:text-xl md:w-3/4">
-          I'm also a bluegrass banjo player and a writer, with{" "}
+          I&apos;m also a bluegrass banjo player and a writer, with{" "}
           <A href="/#writing" target="_self">
             works published in The New York Times
           </A>{" "}
@@ -46,8 +45,11 @@ export default function About() {
         <h2 className="text-4xl font-bold uppercase tracking-tight">CONTACT</h2>
         {
           <ul className="mt-4 flex gap-4">
-            {arr.map((social) => (
-              <div className="dark:hover:slate-950 p-2 hover:bg-slate-950 hover:text-slate-50 dark:hover:bg-slate-50">
+            {arr.map((social, i) => (
+              <div
+                key={i}
+                className="dark:hover:slate-950 p-2 hover:bg-slate-950 hover:text-slate-50 dark:hover:bg-slate-50"
+              >
                 <A
                   className="text-inherit hover:text-inherit"
                   href={social.url}

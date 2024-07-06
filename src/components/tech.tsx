@@ -18,8 +18,8 @@ export default function Tech() {
         TECH
       </h2>
       <div className="mb-4 flex w-2/3 flex-wrap justify-start gap-2">
-        {skillImgLinks.map((link) => (
-          <div>
+        {skillImgLinks.map((link, i) => (
+          <div key={i}>
             <img className="w-12 shrink-0 grow-0" src={link} />
           </div>
         ))}

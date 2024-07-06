@@ -1,7 +1,6 @@
 "use client";
 import { ChevronsDown } from "lucide-react";
 import { motion, useScroll } from "framer-motion";
-import Socials from "@/components/ui/socials";
 import AudioPlayer from "@/components/audioPlayer";
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -20,7 +19,7 @@ export default function Home() {
         <div className="mb-2 uppercase">
           <h1 className="sm:mt-12">
             <div className="relative z-50 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl xl:text-8xl">
-              Hi, I'm
+              Hi, I&apos;m
             </div>
             <div className="relative z-50 mb-2 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl xl:text-8xl">
               Kevin Liao
