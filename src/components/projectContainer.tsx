@@ -12,6 +12,14 @@ import {
 } from "@/components/ui/carousel";
 import A from "@/components/a";
 
+type CardType = {
+  title: string;
+  skills: string[];
+  url?: string;
+  img: string;
+  description: string;
+};
+
 const BoomChuck = {
   title: "BoomChuck",
   skills: ["Web Audio", "Next.js", "TypeScript", "React", "Tone.js"],
@@ -41,10 +49,10 @@ const Dyads = {
     "Web Audio",
     "Tone.js",
   ],
-  url: "https://boomchuck.vercel.app/",
+  // url: "https://boomchuck.vercel.app/",
   img: "/dyads.png",
   description:
-    "Interactive sonification of longitudinal data. Data Musik @ Stanford. Link currently N/A.",
+    "Interactive sonification of longitudinal data. Conversational turns are typed and subsequently turned to music. Data Musik @ Stanford. Link coming soon!",
 };
 
 const HeatSong = {
@@ -75,7 +83,7 @@ const Beandolin = {
     "Electro-acoustic instrument prototype. Routes piezoelectric microphone response to garbanzo beans through a physical model.",
 };
 
-const Cards = [
+const Cards: CardType[] = [
   BoomChuck,
   ThrowADart,
   Dyads,
@@ -118,7 +126,7 @@ export default function ProjectContainer() {
                     {card.skills.map((skill, i) => (
                       <span
                         key={i}
-                        className="rounded-full bg-slate-200 px-3 text-xs font-light dark:bg-slate-700"
+                        className="rounded-none bg-brat-200 px-3 py-1 text-xs font-light dark:bg-brat-700"
                       >
                         {skill}
                       </span>
