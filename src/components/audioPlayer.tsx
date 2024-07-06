@@ -78,7 +78,7 @@ export default function AudioPlayer() {
   };
 
   return (
-    <div className="mr-4 flex items-center gap-4 rounded-tl-[3rem] border-4 border-black bg-slate-50 p-6 drop-shadow-[10px_10px_0px_rgba(0,0,0,1)] transition hover:drop-shadow-[16px_25px_0px_rgba(0,0,0,1)] motion-reduce:transition-none dark:border-white dark:bg-slate-950 dark:drop-shadow-[10px_10px_0px_rgba(255,255,255,1)] dark:hover:drop-shadow-[16px_25px_0px_rgba(255,255,255,1)] sm:w-72 sm:rotate-3 sm:flex-col sm:hover:rotate-6 md:mr-0">
+    <div className="relative mr-4 flex items-center gap-4 rounded-tl-[3rem] border-4 border-black bg-slate-50 p-6 drop-shadow-[10px_10px_0px_rgba(0,0,0,1)] transition hover:drop-shadow-[16px_25px_0px_rgba(0,0,0,1)] motion-reduce:transition-none dark:border-white dark:bg-slate-950 dark:drop-shadow-[10px_10px_0px_rgba(255,255,255,1)] dark:hover:drop-shadow-[16px_25px_0px_rgba(255,255,255,1)] sm:w-72 sm:rotate-3 sm:flex-col sm:hover:rotate-6 md:mr-0">
       <div className="thumbnail aspect-square w-full rounded-tl-[1.6rem] border-4 border-black bg-[#8ace00] dark:border-white">
         <Note></Note>
       </div>
@@ -127,6 +127,8 @@ export default function AudioPlayer() {
           </button>
         </div>
         <Blurb></Blurb>
+        {/*fixes drop-shadow cutoff bug*/}
+        <div className="absolute -right-12"></div>
       </div>
     </div>
   );
