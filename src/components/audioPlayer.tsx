@@ -88,7 +88,7 @@ export default function AudioPlayer() {
 
       <div className="flex flex-col justify-start gap-2">
         <div className="interface flex w-full items-center justify-around">
-          <button>
+          {/* <button>
             <Rewind
               size="32"
               strokeWidth="4"
@@ -96,7 +96,7 @@ export default function AudioPlayer() {
               absoluteStrokeWidth={true}
               strokeLinejoin="miter"
             ></Rewind>
-          </button>
+          </button> */}
           <button onClick={handlePlayPause}>
             {!playing ? (
               <Play
@@ -116,7 +116,7 @@ export default function AudioPlayer() {
               ></Pause>
             )}
           </button>
-          <button>
+          {/* <button>
             <FastForward
               absoluteStrokeWidth={true}
               size="32"
@@ -124,7 +124,7 @@ export default function AudioPlayer() {
               className="fill-current/0 transition hover:fill-current"
               strokeLinejoin="miter"
             ></FastForward>
-          </button>
+          </button> */}
         </div>
         <Blurb></Blurb>
         {/*fixes drop-shadow cutoff bug*/}
