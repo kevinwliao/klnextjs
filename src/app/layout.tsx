@@ -5,6 +5,7 @@ import Header from "@/components/ui/header";
 import Image from "next/image";
 import Sidenav from "@/components/ui/sidenav";
 import { ThemeProvider } from "next-themes";
+import TopNav from "@/components/ui/topnav";
 
 export const metadata: Metadata = {
   title: "Kevin Liao",
@@ -24,11 +25,11 @@ export default function RootLayout({
         {/* @ts-ignore */}
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
-          <Sidenav></Sidenav>
+          {/* <TopNav></TopNav> */}
           {children}
         </ThemeProvider>
       </body>

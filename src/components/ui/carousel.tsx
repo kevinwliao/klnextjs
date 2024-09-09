@@ -206,7 +206,7 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "group mt-8 h-10 w-10 rounded-none hover:bg-slate-950 xl:absolute xl:mt-0",
+        "group mt-8 h-10 w-10 rounded-none hover:bg-slate-950 dark:hover:bg-slate-50 xl:absolute xl:mt-0",
         orientation === "horizontal"
           ? "-left-12 top-1/2 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -217,7 +217,7 @@ const CarouselPrevious = React.forwardRef<
       {...props}
     >
       <ArrowLeft
-        className="h-8 w-8 group-hover:stroke-slate-50"
+        className="h-8 w-8 group-hover:stroke-slate-50 dark:group-hover:stroke-slate-950"
         strokeWidth={4}
         strokeLinecap="butt"
       />
@@ -239,7 +239,7 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "group mt-8 h-10 w-10 rounded-none hover:bg-slate-950 xl:absolute xl:mt-0",
+        "group mt-8 h-10 w-10 rounded-none hover:bg-slate-950 dark:hover:bg-slate-50 dark:hover:text-slate-950 xl:absolute xl:mt-0",
         orientation === "horizontal"
           ? "-right-12 top-1/2 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -250,7 +250,7 @@ const CarouselNext = React.forwardRef<
       {...props}
     >
       <ArrowRight
-        className="h-8 w-8 group-hover:stroke-white"
+        className="h-8 w-8 group-hover:stroke-white dark:group-hover:stroke-slate-950"
         strokeWidth={4}
         strokeLinecap="butt"
       />

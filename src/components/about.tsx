@@ -19,26 +19,26 @@ export default function About() {
   return (
     <div
       id="about"
-      className="min-h-screen snap-start border-b-4 border-slate-950 px-4 py-32 odd:bg-blue-200 even:bg-white dark:border-slate-50 dark:odd:bg-blue-900 dark:even:bg-slate-900 xl:px-72 xl:py-32"
+      className="min-h-screen snap-start border-b-4 border-slate-950 px-4 py-32 odd:bg-blue-200 even:bg-white dark:border-slate-50 dark:odd:bg-blue-900 dark:even:bg-slate-900 md:px-24 lg:px-48 xl:px-72 xl:py-24"
     >
       <div className="mb-2 sm:mb-8">
         <h1 className="mb-3 text-balance text-5xl font-bold uppercase tracking-tight sm:text-6xl md:text-7xl xl:text-8xl">
           About Me
         </h1>
         <p className="mb-4 text-lg sm:text-xl md:w-3/4">
-          Hey, I&apos;m Kevin! I&apos;m a 2024 Stanford University graduate,
-          where I earned a degree in{" "}
-          <A href="https://symsys.stanford.edu/">Symbolic Systems</A> with a
-          concentration in Computer Music. As a developer, I&apos;m excited
-          about cutting-edge front-end technology and continuing to integrate my
-          interdisciplinary technical and creative background into my workflow.
+          Hi, I&apos;m Kevin! I&apos;m a budding designer who draws on a vast
+          and varied toolset to build connections with the world.
+        </p>{" "}
+        <p className="mb-4 text-lg sm:text-xl md:w-3/4">
+          I&apos;ve written for{" "}
+          <span className="italic">The New York Times</span>, and my artwork has
+          been displayed in the Museum of Contemporary Art San Diego.
         </p>
         <p className="mb-4 text-lg sm:text-xl md:w-3/4">
-          I&apos;m also a bluegrass banjo player and a writer, with{" "}
-          <A href="/#writing" target="_self">
-            works published in The New York Times
-          </A>{" "}
-          .
+          I&apos;m a 2024 new graduate of Stanford University, with a B.S. in
+          Symbolic Systems. There, I was a recipient of the Chadrakant and S.
+          Patel Bhakta Scholarship Fund, and was nominated for the Boothe Prize
+          for excellence in writing and rhetoric.
         </p>
       </div>
       <div>

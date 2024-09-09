@@ -26,7 +26,7 @@ export default function Home() {
             </div>
           </h1>
           <h2 className="relative z-50 text-2xl font-semibold tracking-tight text-yellow-600 dark:text-yellow-300 sm:text-4xl">
-            Developer and Writer
+            Designer, Developer, Artist
           </h2>
         </div>
         <AudioPlayer></AudioPlayer>
