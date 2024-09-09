@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         <AudioPlayer></AudioPlayer>
       </div>
-      <div className="z-50 flex flex-grow items-center justify-center">
+      <div className="z-50 flex flex-grow items-center justify-center pt-8">
         <a
           href="#about"
           className="flex flex-col items-center justify-center gap-4 tracking-tight transition-all hover:tracking-wide hover:text-sky-600"
